@@ -1,4 +1,4 @@
-import React from "react";
+import { wrapper } from "../redux/store";
 import "../styles/globals.css";
 
 function App({ Component }) {
@@ -9,4 +9,4 @@ function App({ Component }) {
   );
 }
 
-export default App;
+export default wrapper.withRedux(App);
