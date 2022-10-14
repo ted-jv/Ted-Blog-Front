@@ -6,7 +6,6 @@ import UserProfile from "../components/profile/UserProfile";
 
 const Home = () => {
   const [isLogin, setIsLogin] = useState(false);
-
   return (
     <>
       <Head>
