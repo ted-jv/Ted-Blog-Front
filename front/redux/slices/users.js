@@ -13,21 +13,12 @@ const usersSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
-    getUsersStart: (state, action) => {
-      state.loading = true;
-    },
     getUsersSuccess: (state, action) => {
-      state.loading = false;
       state.data = action.payload;
-    },
-    getUsersRemove: (state, action) => {
-      state.loading = false;
-      state.data = [];
     },
   },
   extraReducers: {},
 });
 
-export const { getUsersRemove, getUsersSuccess, getUsersStart } =
-  usersSlice.actions; // 액션 생성함수
+export const { getUsersSuccess } = usersSlice.actions; // 액션 생성함수
 export default usersSlice.reducer;
