@@ -8,7 +8,9 @@ import * as usersActions from "../../redux/slices/users";
 const SignUpForm = () => {
   const dispatch = useDispatch();
   const userData = useSelector((users) => users);
+
   const [isLogin, setIsLogin] = useState(false);
+
   const [id, onChangeId] = useInput("");
   const [nickname, onChangeNickname] = useInput("");
   const [password, onChangePassword] = useInput("");
@@ -44,7 +46,7 @@ const SignUpForm = () => {
         return setTermError(true);
       }
       console.info(id, nickname, password);
-      dispatch(usersActions.getUsersSuccess({ id, nickname, password }));
+      dispatch(usersActions.postUser({ id, nickname, password }));
     },
     [password, passwordCheck, term, dispatch],
   );
