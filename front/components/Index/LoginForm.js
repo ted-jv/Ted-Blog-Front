@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { useCallback, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import * as userActions from "../../redux/slices/user";
 
-const LoginForm = ({ setIsLogin }) => {
+const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,10 +17,13 @@ const LoginForm = ({ setIsLogin }) => {
     setPassword(e.target.value);
   }, []);
 
-  const handleSubmitLogin = (e) => {
-    e.preventDefault();
-    setIsLogin((prev) => !prev);
-  };
+  const handleSubmitLogin = useCallback(
+    (e) => {
+      e.preventDefault();
+      dispatch(userActions.postUserLogin({ id, password }));
+    },
+    [id, password, dispatch],
+  );
 
   return (
     <>
@@ -47,7 +54,7 @@ const LoginForm = ({ setIsLogin }) => {
           />
         </div>
         <div>
-          <button loading={false}>로그인</button>
+          <button>로그인</button>
           <Link href="/signup">
             <a>
               <button>회원가입</button>

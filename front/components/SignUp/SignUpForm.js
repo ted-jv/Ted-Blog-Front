@@ -3,11 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import PasswordError from "./PasswordError";
 import TermErrorMessage from "./TermErrorMessage";
 import useInput from "../../hooks/useInput";
-import * as usersActions from "../../redux/slices/users";
+import * as userActions from "../../redux/slices/user";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
-  const userData = useSelector((users) => users);
+  const userData = useSelector((state) => state.user);
 
   const [isLogin, setIsLogin] = useState(false);
 
@@ -46,7 +46,7 @@ const SignUpForm = () => {
         return setTermError(true);
       }
       console.info(id, nickname, password);
-      dispatch(usersActions.postUser({ id, nickname, password }));
+      dispatch(userActions.postUserLogin({ id, nickname, password }));
     },
     [password, passwordCheck, term, dispatch],
   );

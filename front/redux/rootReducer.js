@@ -1,7 +1,7 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 
-import users from "./slices/users";
+import user from "./slices/user";
 import posts from "./slices/posts";
 
 const reducer = (state, action) => {
@@ -12,10 +12,9 @@ const reducer = (state, action) => {
     };
   }
   return combineReducers({
-    users,
+    user,
     posts,
     // 여기에 추가
   })(state, action);
 };
-
 export default reducer;
