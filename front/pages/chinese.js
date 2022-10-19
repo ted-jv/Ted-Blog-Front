@@ -1,8 +1,13 @@
 import React from "react";
-import AppLayout from "../components/Layout/AppLayout";
+import AppLayout from "../components/AppLayout/AppLayout";
+import ChineseList from "../components/Chinese/ContentList/ContentList";
 
 const chinese = () => {
-  return <AppLayout></AppLayout>;
+  return (
+    <AppLayout>
+      <ChineseList />
+    </AppLayout>
+  );
 };
 
 export default chinese;

@@ -19,6 +19,9 @@ const Header = () => {
             <a>profile</a>
           </Link>
           <SearchBar />
+          <Link href="/chinese">
+            <a>chinese</a>
+          </Link>
           <Link href="/signup">
             <a>signup</a>
           </Link>

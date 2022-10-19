@@ -9,13 +9,6 @@ const Home = () => {
   const { isLoggedIn } = useSelector((state) => state.user);
   console.info(isLoggedIn);
 
-  const abc = { b: 1, c: "abc" };
-  const { b } = abc;
-  const { c } = abc;
-  console.info(b);
-  console.info(c);
-  console.log(b);
-  console.log(c);
   return (
     <>
       <Head>
