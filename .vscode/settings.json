@@ -1,4 +1,12 @@
 {
   "reactSnippets.settings.prettierEnabled": true,
+<<<<<<< HEAD
   "emmet.showSuggestionsAsSnippets": true
+=======
+  "emmet.showSuggestionsAsSnippets": true,
+  "git.ignoreLimitWarning": true,
+  "eslint.alwaysShowStatus": true,
+  "emmet.preferences": {},
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+>>>>>>> 9d7cda33e333252e1a01b8b27d67d03abfdf9afe
 }

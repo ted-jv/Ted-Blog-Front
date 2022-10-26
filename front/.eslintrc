@@ -31,5 +31,8 @@
     "react/jsx-one-expression-per-line": 0,
     "no-nested-ternary": 0
   }
+<<<<<<< HEAD
   //
+=======
+>>>>>>> 9d7cda33e333252e1a01b8b27d67d03abfdf9afe
 }
