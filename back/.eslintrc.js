@@ -17,6 +17,7 @@ module.exports = {
     'no-var': 'error', // var 금지
     'no-multiple-empty-lines': 'error', // 여러 줄 공백 금지
     'no-console': ['error', { allow: ['warn', 'error', 'info'] }], // console.log() 금지
+    'prettier/prettier': ['error', { endOfLine: 'auto' }], // prettier Delete `` 에러 잡기 위한
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
